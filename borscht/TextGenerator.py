@@ -65,7 +65,7 @@ class TextGenerator(object):
 
   def get_triplet(self, prefix1, prefix2):
     """
-    refix1とprefix2からsuffixをランダムに取得します。
+    prefix1 と prefix2 から suffix をランダムに取得します。
 
     Parameters
     ----------
@@ -136,7 +136,7 @@ class TextGenerator(object):
       複数の "3つ組とそれに関する情報" が格納された配列。
 
     Returns
-    ------
+    -------
     triplet : dict
       確率的に選んだ 3つ組
     """
