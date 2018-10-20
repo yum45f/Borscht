@@ -1,0 +1,381 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>borscht package &mdash; Borscht v1.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Borscht
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">borscht package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-borscht.ChainGenerator">borscht.ChainGenerator module</a></li>
+<li><a class="reference internal" href="#module-borscht.TextGenerator">borscht.TextGenerator module</a></li>
+<li><a class="reference internal" href="#module-borscht">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Borscht</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>borscht package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/docs/borscht.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="borscht-package">
+<h1>borscht package<a class="headerlink" href="#borscht-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-borscht.ChainGenerator">
+<span id="borscht-chaingenerator-module"></span><h2>borscht.ChainGenerator module<a class="headerlink" href="#module-borscht.ChainGenerator" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="borscht.ChainGenerator.ChainGenerator">
+<em class="property">class </em><code class="descclassname">borscht.ChainGenerator.</code><code class="descname">ChainGenerator</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#borscht.ChainGenerator.ChainGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>マルコフ連鎖に用いるチェーン(連鎖)を生成し、必要があれば JSON形式で出力・保存できるクラスです。</p>
+<dl class="docutils">
+<dt>text <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>チェーン生成の元になる文。</dd>
+<dt>tagger <span class="classifier-delimiter">:</span> <span class="classifier">MeCab.Tagger</span></dt>
+<dd>形態素解析に用いる Tagger オブジェクト。</dd>
+<dt>chain <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd>マルコフ連鎖に用いるチェーンが格納された辞書型配列。</dd>
+</dl>
+<dl class="attribute">
+<dt id="borscht.ChainGenerator.ChainGenerator.BEGIN">
+<code class="descname">BEGIN</code><em class="property"> = 'BOS'</em><a class="headerlink" href="#borscht.ChainGenerator.ChainGenerator.BEGIN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="borscht.ChainGenerator.ChainGenerator.END">
+<code class="descname">END</code><em class="property"> = 'EOS'</em><a class="headerlink" href="#borscht.ChainGenerator.ChainGenerator.END" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="borscht.ChainGenerator.ChainGenerator.dump">
+<code class="descname">dump</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#borscht.ChainGenerator.ChainGenerator.dump" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="borscht.ChainGenerator.ChainGenerator.generate_chain">
+<code class="descname">generate_chain</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#borscht.ChainGenerator.ChainGenerator.generate_chain" title="Permalink to this definition">¶</a></dt>
+<dd><p>マルコフ連鎖に用いるチェーンを生成します。</p>
+<dl class="docutils">
+<dt>chain <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd>マルコフ連載に用いるチェーン。
+key: 3階マルコフ用の3つ組 val: 出現回数</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="borscht.ChainGenerator.ChainGenerator.generate_triplet_block">
+<code class="descname">generate_triplet_block</code><span class="sig-paren">(</span><em>morphemes</em><span class="sig-paren">)</span><a class="headerlink" href="#borscht.ChainGenerator.ChainGenerator.generate_triplet_block" title="Permalink to this definition">¶</a></dt>
+<dd><p>引数で渡された形態素の配列から、形態素毎の3つ組を生成し、
+出現回数など、チェーンの生成に必要な情報を合わせたブロックを返します。</p>
+<dl class="docutils">
+<dt>morphemes <span class="classifier-delimiter">:</span> <span class="classifier">list of str</span></dt>
+<dd>形態素配列。3つ以上の形態素が含まれている場合のみ有効。</dd>
+</dl>
+<dl class="docutils">
+<dt>triplet_blocks <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd>3つ組とその出現回数が格納されたブロックの辞書型配列。
+引数に渡された形態素の数自体が3つ以下の場合は空の辞書型配列が渡されます。
+key: 3つ組 (tuple) val: 出現回数 (int)</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="borscht.ChainGenerator.ChainGenerator.morphological_analysis">
+<code class="descname">morphological_analysis</code><span class="sig-paren">(</span><em>sentence</em><span class="sig-paren">)</span><a class="headerlink" href="#borscht.ChainGenerator.ChainGenerator.morphological_analysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>引数に渡された一文の形態素解析をします。</p>
+<dl class="docutils">
+<dt>sentence <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>解析する文。</dd>
+</dl>
+<dl class="docutils">
+<dt>morphemes <span class="classifier-delimiter">:</span> <span class="classifier">list of str</span></dt>
+<dd>形態素で分割された結果のリスト。</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="borscht.ChainGenerator.ChainGenerator.splitting_text">
+<code class="descname">splitting_text</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#borscht.ChainGenerator.ChainGenerator.splitting_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>引数に渡された長めの文章を一文ずつに分割します。</p>
+<dl class="docutils">
+<dt>text <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>解析する文。</dd>
+</dl>
+<dl class="docutils">
+<dt>sentences <span class="classifier-delimiter">:</span> <span class="classifier">list of str</span></dt>
+<dd>分割された一文ずつのリスト。</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-borscht.TextGenerator">
+<span id="borscht-textgenerator-module"></span><h2>borscht.TextGenerator module<a class="headerlink" href="#module-borscht.TextGenerator" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="borscht.TextGenerator.TextGenerator">
+<em class="property">class </em><code class="descclassname">borscht.TextGenerator.</code><code class="descname">TextGenerator</code><span class="sig-paren">(</span><em>chain_json_filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#borscht.TextGenerator.TextGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Chainに基づいて文章を生成するクラスです。</p>
+<dl class="docutils">
+<dt>chain <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>マルコフ連鎖に用いるチェーンが格納された配列。</dd>
+</dl>
+<dl class="method">
+<dt id="borscht.TextGenerator.TextGenerator.generate">
+<code class="descname">generate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#borscht.TextGenerator.TextGenerator.generate" title="Permalink to this definition">¶</a></dt>
+<dd><p>ランダムに一文を生成します。</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="borscht.TextGenerator.TextGenerator.get_chain_data">
+<code class="descname">get_chain_data</code><span class="sig-paren">(</span><em>filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#borscht.TextGenerator.TextGenerator.get_chain_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>チェーン情報を JSONファイルから取得します。</p>
+<dl class="docutils">
+<dt>chain <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>チェーンが格納された配列。</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="borscht.TextGenerator.TextGenerator.get_first_triplet">
+<code class="descname">get_first_triplet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#borscht.TextGenerator.TextGenerator.get_first_triplet" title="Permalink to this definition">¶</a></dt>
+<dd><p>文章のはじまりの3つ組をランダムに取得します。</p>
+<dl class="docutils">
+<dt>triplet <span class="classifier-delimiter">:</span> <span class="classifier">tuple</span></dt>
+<dd>文章のはじまりの3つ組が格納されたタプル。</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="borscht.TextGenerator.TextGenerator.get_probable_triplet">
+<code class="descname">get_probable_triplet</code><span class="sig-paren">(</span><em>triplet_blocks</em><span class="sig-paren">)</span><a class="headerlink" href="#borscht.TextGenerator.TextGenerator.get_probable_triplet" title="Permalink to this definition">¶</a></dt>
+<dd><p>引数として渡された三つ組の配列の中から確率的に一つ選び返します。</p>
+<dl class="docutils">
+<dt>triplet_blocks <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>複数の “3つ組とそれに関する情報” が格納された配列。</dd>
+</dl>
+<dl class="docutils">
+<dt>triplet <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd>確率的に選んだ 3つ組</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="borscht.TextGenerator.TextGenerator.get_triplet">
+<code class="descname">get_triplet</code><span class="sig-paren">(</span><em>prefix1</em>, <em>prefix2</em><span class="sig-paren">)</span><a class="headerlink" href="#borscht.TextGenerator.TextGenerator.get_triplet" title="Permalink to this definition">¶</a></dt>
+<dd><p>prefix1 と prefix2 から suffix をランダムに取得します。</p>
+<dl class="docutils">
+<dt>prefix1 <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>1つ目のprefix</dd>
+<dt>prefix2 <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>2つ目のprefix</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="borscht.TextGenerator.TextGenerator.search_chain">
+<code class="descname">search_chain</code><span class="sig-paren">(</span><em>*queries</em><span class="sig-paren">)</span><a class="headerlink" href="#borscht.TextGenerator.TextGenerator.search_chain" title="Permalink to this definition">¶</a></dt>
+<dd><p>引数から指定された条件に合致するものをチェーンから取得します。</p>
+<dl class="docutils">
+<dt>queries <span class="classifier-delimiter">:</span> <span class="classifier">tuple or list</span></dt>
+<dd>チェーンの検索条件。</dd>
+</dl>
+<dl class="docutils">
+<dt>result <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>取得したチェーン情報の配列。</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-borscht">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-borscht" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, YuSan19
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
