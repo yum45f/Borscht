@@ -15,7 +15,7 @@ def _requires_from_file(filename):
 
 setup(
     name="borscht",
-    version='0.0.1',
+    version='1.0.0',
     url='https://github.com/yu-san-19/Borscht',
     author='YuSan',
     author_email='ysoga19@gmail.com',
