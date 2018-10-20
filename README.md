@@ -85,8 +85,8 @@ $ pip install borscht
 
 ## License
 
-This repository licensed under the [Apache License, Version 2.0](/LICENSE).  
-Please see the [LICENSE](/LICENSE) file.
+This repository licensed under the [Apache License, Version 2.0](https://github.com/yu-san-19/Borscht/blob/master/LICENSE).  
+Please see the [LICENSE](https://github.com/yu-san-19/Borscht/blob/master/LICENSE) file.
 
 ## Author
 
