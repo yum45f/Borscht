@@ -17,7 +17,7 @@ setup(
     name="borscht",
     version='0.0.1',
     url='https://github.com/yu-san-19/Borscht',
-    author='Yuma Soga',
+    author='YuSan',
     author_email='ysoga19@gmail.com',
     description='The Python Module of The japanese sentence generator by markov chain.',
     long_description=readme,
