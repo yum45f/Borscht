@@ -1,26 +1,25 @@
 Borscht
 ====
-**The Python Module of The japanese sentence generator by markov chain.**
+**The Python Module of The Japanese sentence generator by Markov chain.**
 
 
 ## Description
-The Python Module of The japanese sentence generator by markov chain.
+The Python Module of The Japanese sentence generator by Markov chain.
 
-Do you want generate text by markov chain ?  
-It's quite easy! Please call this method: `generate()`.  
-Then, you can do it.
+Do you want to generate text by Markov chain?  
+It's quite easy! Just copy the example below.
 
 ## Requirement
-If you want to run this module, please install them.
+If you want to run this module, please install these:
 
 - Python 3.x
 - MeCab - <http://taku910.github.io/mecab/>
 - mecab-python3 (Python Module)
 
 **Recommendation:**
-We recommend you that use dictionary of MeCab, `mecab-ipadic-NEologd`
+We recommend that you use this MeCab dictionary, `mecab-ipadic-NEologd`
 
-> **If you want detailed information that how to install mecab and `mecab-ipadic-NEologd`,   
+> **If you want detailed information about how to install MeCab and `mecab-ipadic-NEologd`,   
 please see this post. (written in Japanese):  
 <https://qiita.com/taroc/items/b9afd914432da08dafc8>**
 
@@ -29,11 +28,10 @@ please see this post. (written in Japanese):
 
 ```python
 # Import borscht.
-from borscht import ChainGenerator
-from borscht import TextGenerator
+from borscht import ChainGenerator, TextGenerator
 
 # Text used for chain generation of Markov chain
-learned_text = """
+text = """
 　親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。
 なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。
 新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。
@@ -59,9 +57,9 @@ learned_text = """
 """
 # 夏目漱石 「坊っちゃん」より
 
-cg = ChainGenerator(text) # Generate instance of class that generate chains
+cg = ChainGenerator.ChainGenerator(text) # Generate instance of class that generate chains
 cg.dump() # Dump json file written about chains' info.
-tg = TextGenerator("chain.json") # Generate instance of class that generate sentence
+tg = TextGenerator.TextGenerator("chain.json") # Generate instance of class that generate sentence
 
 for i in range(10):
   sentence = tg.generate() # Generate sentence
@@ -69,7 +67,7 @@ for i in range(10):
 ```
 
 ## Installation
-That's quite simply when you use pip command:
+It's quite simple using pip command:
 
 ```bash
 $ pip install borscht
