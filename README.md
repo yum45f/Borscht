@@ -59,7 +59,9 @@ text = """
 
 cg = bor.ChainGenerator(text) # Generate instance of class that generate chains
 cg.dump() # Dump json file written about chains' info.
-tg = bor.TextGenerator("chain.json") # Generate instance of class that generate sentence
+tg = bor.TextGenerator("chain.json")
+# Generate instance of class that generate sentence.
+# Currently filepath must be "chain.json".
 
 for i in range(10):
   sentence = tg.generate() # Generate sentence
