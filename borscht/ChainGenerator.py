@@ -105,7 +105,7 @@ class ChainGenerator(object):
 
     tagger = self.tagger
     tagger.parse('')
-    
+
     morphemes = []
     sentence = sentence
     node = self.tagger.parseToNode(sentence)
@@ -154,10 +154,10 @@ class ChainGenerator(object):
 
     return triplet_blocks
 
-  def dump(self):
+  def dump(self, filepath):
     chain_data = []
     try:
-        with open('chain.json', 'r', encoding="utf8", errors='ignore') as f:
+        with open(filepath, 'r', encoding="utf8", errors='ignore') as f:
             chain_data = json.load(f)
     except FileNotFoundError:
       pass
@@ -165,8 +165,8 @@ class ChainGenerator(object):
     for (triplet, num) in self.chain.items():
       chain_data.append([triplet[0], triplet[1], triplet[2], num])
 
-    with open('chain.json', 'w') as f:
+    with open(filepath, 'w') as f:
       json.dump(chain_data, f, indent=4, ensure_ascii=False)
 
-    with open('tweets.txt', 'w') as f:
-      f.write("")
+    # with open('tweets.txt', 'w') as f:
+    #   f.write("")
