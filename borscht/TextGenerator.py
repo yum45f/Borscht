@@ -19,6 +19,7 @@ class TextGenerator(object):
     ----------
     chain_json_filepath : str
       チェーンデータが書かれている JSONファイルのパス。
+      現時点においては 'chain.json' と指定することが必須になります。
     """
     self.chain = self.get_chain_data(chain_json_filepath)
 
