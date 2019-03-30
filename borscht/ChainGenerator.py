@@ -1,6 +1,7 @@
 import MeCab
 import json
 import re
+import os
 from collections import defaultdict
 
 
@@ -160,7 +161,9 @@ class ChainGenerator(object):
         with open(filepath, 'r', encoding="utf8", errors='ignore') as f:
             chain_data = json.load(f)
     except FileNotFoundError:
-      pass
+        dirname = os.path.dirname(filepath)
+        os.makedirs(dirname, exist_ok=True)
+        pass
 
     for (triplet, num) in self.chain.items():
       chain_data.append([triplet[0], triplet[1], triplet[2], num])
