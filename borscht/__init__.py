@@ -1,2 +1,2 @@
-from . import ChainGenerator
-from . import TextGenerator
+from .ChainGenerator import ChainGenerator
+from .TextGenerator import TextGenerator
