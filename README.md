@@ -57,9 +57,9 @@ text = """
 """
 # 夏目漱石 「坊っちゃん」より
 
-cg = ChainGenerator.ChainGenerator(text) # Generate instance of class that generate chains
+cg = ChainGenerator(text) # Generate instance of class that generates chains
 cg.dump() # Dump json file written about chains' info.
-tg = TextGenerator.TextGenerator("chain.json") # Generate instance of class that generate sentence
+tg = TextGenerator("chain.json") # Generate instance of class that generates sentence
 
 for i in range(10):
   sentence = tg.generate() # Generate sentence
