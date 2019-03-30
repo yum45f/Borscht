@@ -1,2 +1,2 @@
-from .ChainGenerator import ChainGenerator
-from .TextGenerator import TextGenerator
+from borscht.ChainGenerator import *
+from borscht.TextGenerator import *

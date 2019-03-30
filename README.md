@@ -28,7 +28,7 @@ please see this post. (written in Japanese):
 
 ```python
 # Import borscht.
-from borscht import ChainGenerator, TextGenerator
+import borscht as bor
 
 # Text used for chain generation of Markov chain
 text = """
@@ -57,9 +57,9 @@ text = """
 """
 # 夏目漱石 「坊っちゃん」より
 
-cg = ChainGenerator(text) # Generate instance of class that generates chains
+cg = bor.ChainGenerator(text) # Generate instance of class that generate chains
 cg.dump() # Dump json file written about chains' info.
-tg = TextGenerator("chain.json") # Generate instance of class that generates sentence
+tg = bor.TextGenerator("chain.json") # Generate instance of class that generate sentence
 
 for i in range(10):
   sentence = tg.generate() # Generate sentence
