@@ -6,7 +6,7 @@ Borscht
 ## Description
 The Python Module of The Japanese sentence generator by Markov chain.
 
-Do you want to generate text by Markov chain?  
+Do you want to generate text by Markov chain?
 It's quite easy! Just copy the example below.
 
 ## Requirement
@@ -19,8 +19,8 @@ If you want to run this module, please install these:
 **Recommendation:**
 We recommend that you use this MeCab dictionary, `mecab-ipadic-NEologd`
 
-> **If you want detailed information about how to install MeCab and `mecab-ipadic-NEologd`,   
-please see this post. (written in Japanese):  
+> **If you want detailed information about how to install MeCab and `mecab-ipadic-NEologd`,
+please see this post. (written in Japanese):
 <https://qiita.com/taroc/items/b9afd914432da08dafc8>**
 
 
@@ -57,11 +57,10 @@ text = """
 """
 # 夏目漱石 「坊っちゃん」より
 
-cg = bor.ChainGenerator(text) # Generate instance of class that generate chains
-cg.dump() # Dump json file written about chains' info.
-tg = bor.TextGenerator("chain.json")
-# Generate instance of class that generate sentence.
-# Currently filepath must be "chain.json".
+cg = bor.ChainGenerator(text) # Generate instance of class that generates chains
+cg.dump("./chain.json") # Dump json file written about chains' info.
+tg = bor.TextGenerator("./chain.json")
+# Generate instance of class that generates sentence.
 
 for i in range(10):
   sentence = tg.generate() # Generate sentence
