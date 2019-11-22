@@ -17,15 +17,15 @@ setup(
     name="borscht",
     use_scm_version=True,
     setup_requires=['setuptools_scm'],
-    url='https://github.com/jscg/Borscht',
+    url='https://github.com/yu-san-19/Borscht',
     author='YuSan19',
     author_email='ysoga19@gmail.com',
-    maintainer='Junior Social Creators Group',
-    maintainer_email='jscg.official@gmail.com',
+    maintainer='YuSan19',
+    maintainer_email='ysoga19@gmail.com',
     description='The Python Module of The japanese sentence generator by markov chain.',
     long_description=readme,
     packages=find_packages(),
     install_requires=_requires_from_file('requirements.txt'),
     long_description_content_type="text/markdown",
-    license="Apache-2.0"
+    license="MIT"
 )
