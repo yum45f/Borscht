@@ -9,6 +9,8 @@ The Python Module of The Japanese sentence generator by Markov chain.
 Do you want to generate text by Markov chain?
 It's quite easy! Just copy the example below.
 
+[Documentation](https://borscht.nobi-nobi-yusan.com)
+
 ## Requirement
 If you want to run this module, please install these:
 
@@ -84,9 +86,9 @@ $ pip install borscht
 
 ## License
 
-This repository licensed under the [Apache License, Version 2.0](/LICENSE).  
+This repository licensed under the [MIT](/LICENSE).  
 Please see the [LICENSE](/LICENSE) file.
 
 ## Author
 
-[YuSan19](https://github.com/yu-san-19) and other [Contributors](https://github.com/jscg/Borscht/graphs/contributors).
+[YuSan19](https://github.com/yu-san-19) and other [Contributors](https://github.com/yu-san-19/Borscht/graphs/contributors).
